@@ -28,7 +28,7 @@ $menu->menuBar("Past Credits +","BackToSettingsMenu()");
 				<?php 
 					while($row = $result->fetch_assoc()){
 						?>
-							<option value="<?php echo($row['idCardN']) ?>"><?php echo($row['name']) ?></option>
+							<option value="<?php echo($row['id']) ?>"><?php echo($row['name']) ?></option>
 						<?php
 					}
 				

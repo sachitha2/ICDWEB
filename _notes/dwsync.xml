@@ -258,7 +258,7 @@
 <file name="selectVehicleForTmpStock.php" server="infinisolutionslk.com" local="131897642990021538" remote="131897193000000000" Dst="0" />
 <file name="shopHistoryViewBill.php" server="infinisolutionslk.com" local="131889330373353338" remote="131888896800000000" Dst="0" />
 <file name="creditsOfShops.php" server="infinisolutionslk.com" local="131889330295798864" remote="131888896800000000" Dst="0" />
-<file name="flush.php" server="infinisolutionslk.com" local="132002141262781674" remote="132001693800000000" Dst="0" />
+<file name="flush.php" server="infinisolutionslk.com" local="132002166821174411" remote="132001778400000000" Dst="0" />
 <file name="flusher.php" server="infinisolutionslk.com" local="132002141984963250" remote="132001693800000000" Dst="0" />
 <file name="cookieCreator.php" server="infinisolutionslk.com" local="131873406726612418" remote="131872960800000000" Dst="0" />
 <file name="profitThisMonth.php" server="infinisolutionslk.com" local="131874234311736011" remote="131873786400000000" Dst="0" />
@@ -274,7 +274,7 @@
 <file name="JSONGetReturns.php" server="infinisolutionslk.com" local="131938168885159630" remote="131937718800000000" Dst="0" />
 <file name="todayProfit.php" server="infinisolutionslk.com" local="131941006764503457" remote="131940557400000000" Dst="0" />
 <file name="profitOfADay.php" server="infinisolutionslk.com" local="131942081081527613" remote="131941631400000000" Dst="0" />
-<file name="loadPastShopCreditsToStage.php" server="infinisolutionslk.com" local="132002139059381863" remote="132001693800000000" Dst="0" />
-<file name="pastShopCreditsSelectShop.php" server="infinisolutionslk.com" local="132002137041572846" remote="132001693800000000" Dst="0" />
-<file name="error_log" server="infinisolutionslk.com" local="132001693200000000" remote="132001693200000000" Dst="0" />
+<file name="loadPastShopCreditsToStage.php" server="infinisolutionslk.com" local="132002516670574237" remote="132002073000000000" Dst="0" />
+<file name="pastShopCreditsSelectShop.php" server="infinisolutionslk.com" local="132002149260503774" remote="132001723800000000" Dst="0" />
+<file name="pastCreditAdder.php" server="infinisolutionslk.com" local="132002529567362476" remote="132002079600000000" Dst="0" />
 </dwsync>

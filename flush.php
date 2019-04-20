@@ -1,17 +1,8 @@
 <?php
-
-
 include("func/basic.class.php");
-
 $menu = new basic;
 $menu->menuBar("Flush all data","BackToSettingsMenu()");
 ?>
-
-<!--value="sachitha2018ICD"-->
-
-
-
-
 <div class="row">
 	  <div class="col-md-4"></div>
 	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">

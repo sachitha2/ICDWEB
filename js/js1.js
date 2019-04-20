@@ -1922,11 +1922,13 @@ function updateInBItemId(id){
 	alert(id);
 }
 function loadPastShopCreditsToStage(id){
+			
 			if(id.length != 0){
+			loadingModal();
 			var xmlhttp = new XMLHttpRequest();
         	xmlhttp.onreadystatechange = function() {
         	if (this.readyState === 4 && this.status == 200) {
-  				//hideModal();
+  				hideModal();
 				
 				document.getElementById("pastShopCredits").innerHTML = this.responseText;
 				//getTmpInvoices(vehicleId);
@@ -1960,3 +1962,25 @@ function flush(pass){
  }
 
 }
+
+
+
+function pastCreditAdder(shopId,amount){
+		if(amount != ""){
+			
+		
+		showModal();
+		var xmlhttp = new XMLHttpRequest();
+        	xmlhttp.onreadystatechange = function() {
+        	if (this.readyState === 4 && this.status == 200) {
+				document.getElementById("msg").innerHTML = this.responseText;
+  				hideModal();
+           		}
+        	};
+        	xmlhttp.open("GET", url+"pastCreditAdder.php?=shopId"+shopId+"&amount="+amount, true);//generating  get method link
+        	xmlhttp.send();
+ 
+	
+ 
+
+}}
