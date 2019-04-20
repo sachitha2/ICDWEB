@@ -1,0 +1,127 @@
+<body><br>
+<div class="container container-fluid">
+
+<div class="jumbotron">
+	<h1 align="center">Edit Shop</h1>
+	<hr width="95%">
+	
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center">
+	  	<div style="opacity: 1.0;">
+	  
+ 	  	  <div id="show">
+ 	  	  
+  	  	  <h5>Enter the shop's name, you want to edit.</h5><br>
+	  	  <h4>User Name</h4>
+			<input type="text" class="txtbox" name="Name" id="Name" onKeyPress="enter(event)" required><br>
+  	  	  <h5 id="errorMessage" style="color: red"></h5><br>
+	  	  <button id="EditShop" class=" btn-block button button1" type="button" onClick="editShop()">Edit Shop</button>
+	  	  
+	  	  </div>
+	  	  
+		</div>
+		</div>
+		<div class="col-md-4">
+			<div align="center" style="vertical-align:middle;">
+				<h5 id="OutName" ></h5>
+				<h5 id="OutAddress" ></h5>
+				<h5 id="OutPhone" ></h5>
+				<h5 id="OutNIC" ></h5>
+				<h5 id="OutRoot" ></h5>
+			</div>
+		</div>
+	</div>
+</div>
+	
+</div>
+
+</body>
+
+<script type="text/javascript" >
+/*	
+var input = document.getElementById("UserName");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("RemoverUser").click();
+    }
+});*/
+
+function enter(e) {
+  if (e.which == 13) { editShop(); }
+}
+
+function enter2(e) {
+  if (e.which == 13) { save(); }
+}
+
+	
+function editShop() {
+  
+  var xhttp;
+  str1 = document.getElementById("Name").value;
+  
+
+  if (!(str1=="")){
+  
+  		xhttp = new XMLHttpRequest();
+  		xhttp.onreadystatechange = function() {
+    		if (this.readyState == 4 && this.status == 200) {
+      		//document.getElementById("errorMessage").innerHTML = this.responseText;
+	 		//document.getElementById("UserName").value = "";
+			//this.responseText;
+				if (this.responseText=="Invalid Name"){
+					document.getElementById("errorMessage").innerHTML = this.responseText;
+				}else{
+					document.getElementById("show").innerHTML = this.responseText;
+				}
+	  
+    		}
+  		};
+  		xhttp.open('GET', "EditShop.php?Name="+str1, true);
+  		xhttp.send();  
+  }else{
+	  	document.getElementById("errorMessage").innerHTML = "Please fill the above field";
+  }
+	
+}
+
+function save(){
+  var xhttp;
+  var str2 = document.getElementById("Address").value;
+  var str3 = document.getElementById("Phone").value;
+  var str4 = document.getElementById("NIC_Number").value;
+  var str5 = document.getElementById("Root_Id").value;
+	
+
+  if (!(str2=="" || str3=="" || str4=="" || str5=="")){
+  
+  		xhttp = new XMLHttpRequest();
+  		xhttp.onreadystatechange = function() {
+    		if (this.readyState == 4 && this.status == 200) {
+				if(this.responseText=="Changes have been saved successfully"){
+					document.getElementById("errorMessage").innerHTML = "<div style='color: blue'>User was registered successfully</div>";
+	 				//document.getElementById("UserName").value = "";
+					document.getElementById("OutName").innerHTML = "Name : " + str1;
+					document.getElementById("OutAddress").innerHTML = "Address : " + str2;
+					document.getElementById("OutPhone").innerHTML = "Phone Number : " + str3;
+	    			document.getElementById("OutNIC").innerHTML = "Owner's NIC Number : " + str4;
+					document.getElementById("OutRoot").innerHTML = "Root ID : " + str5;
+				}else {
+					document.getElementById("errorMessage").innerHTML = this.responseText;
+				}
+      		
+    		}
+  		};
+  		xhttp.open('GET', "EditShop2.php?Name="+str1+"&NIC_Number="+str4+"&Phone="+str3+"&Root_Id="+str5+"&Address="+str2, true);
+  		xhttp.send();  
+  }else{
+	  	document.getElementById("errorMessage").innerHTML = "Please fill all the fields";
+  }
+}
+
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" >
+    <span class="close" onClick="hideModal()">&times;</span>
+    <div class="" id="modalContent">
+    
+    
+    </div>
+  </div>
+
+</div>
+
+<!-- modal ending-->
+
+
+<hr width="100%">
+<img src="back.png" width="90" height="90" onClick="backToUsersMenu()" class="floateLeft" style="cursor: pointer">
+<div class="mainHeadDiv">Remove User</div>
+<hr width="100%">
+
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C" >
+	  	<div style="opacity: 1.0;">
+	  
+  	  	  <h5>Enter the User name, you want to remove.</h5><br>
+	  	  <h4>User Name</h4>
+			<input type="text" class="txtbox" name="UserName" id="UserName" onKeyPress="enterRemoveUser(event)"  required style="color: black"><br>
+  	  	  <h5 id="errorMessage" style="color: red"></h5><br>
+	  	  <button id="RemoverUser" class=" btn-block button button1" type="button" onClick="removeUser()">Remove User</button>
+	  	  
+		</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+
+

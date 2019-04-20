@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<!-- Latest compiled and minified CSS -->
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<style>
+	html {
+		overflow:hidden;	
+}
+		body {
+  background: #2d343d;
+}
+
+.login {
+  margin: 10px auto;
+  width: 300px;
+  padding: 30px 25px;
+  background: white;
+  border-radius: 25px;
+  border: 1px solid #c4c4c4;
+  
+}
+	@media only screen and (max-width: 600px) {
+		 width: 90% !important;
+	}
+h1.login-title {
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #0099CC;
+  text-align:center;
+  background: #fff;
+ 
+}
+
+.login-input {
+  width: 285px;
+  height: 50px;
+  margin-bottom: 25px;
+  padding-left:10px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login-input:focus {
+    border-color:#6e8095;
+    outline: none;
+  }
+.login-button {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background: #3C3C3C;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer; 
+  outline:0;
+}
+
+.login-lost
+{
+  text-align:center;
+  margin-bottom:0px;
+}
+
+.login-lost a
+{
+  color:#666;
+  text-decoration:none;
+  font-size:13px;
+}
+
+	</style>
+</head>
+
+<body ><br>
+
+<!--
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
+	  	<div style="opacity: 1.0;">
+	  		<h1 style="font-size: 60px;color: white">Login</h1>
+	  	  <h4>User Name</h4>
+			<input type="text" class="txtbox" name="UserName"  value="admin" required><br><br>
+  	  	  <h4>Password</h4>
+			<input type="password" class="txtbox" name="Password" value="1" onKeyPress="enter(event)" required><br>
+  	  	  
+	  	  <button  class=" btn-block button button1" type="button" >Login</button>
+		
+		</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>-->
+<form class="login" method="get" action="logCheck.php">
+   	<center><img src="island-logo.png" width="140px" height="140px"></center>
+   	<br>
+    <h1 class="login-title">Admin Login </h1>
+    <input type="text" class="login-input" placeholder="Enter User Name" autofocus id="UserName" name="uName" value="admin">
+    <input type="password" class="login-input" placeholder="Enter Password" id="Password"  name="pass" value="1" >
+    <h5 id="errorMessage" style="color: red"></h5><br>
+    <input type="button"  value="Login" id="Login" class="login-button" onClick="checkUser()">
+  	
+  </form>
+	
+<div style="position: fixed;bottom: 10px;right: 15px;z-index: 100;color: white" class="hideMe">Developed by Infini Solutions</div>
+</body>
+
+<script type="text/javascript" >
+	
+function enter(e) {
+  if (e.which == 13) { checkUser(); }
+}
+	
+function checkUser() {
+  	document.getElementById("errorMessage").innerHTML = "<center><img src='load.gif' width='10' heigh='10'></center>";
+  	var xhttp;
+  	var str1 = document.getElementById("UserName").value;
+  	var str2 = document.getElementById("Password").value;
+	
+	if (!(str1=="" || str2=="")){
+	
+  		xhttp = new XMLHttpRequest();
+  		xhttp.onreadystatechange = function() {
+    		if (this.readyState == 4 && this.status == 200) {
+      		//document.getElementById("errorMessage").innerHTML = this.responseText;
+	 		document.getElementById("UserName").value = "";
+	  		document.getElementById("Password").value = "";
+				var obj = JSON.parse(this.responseText);
+				//document.getElementById("errorMessage").innerHTML =obj.data ;
+				//alert(typeof(obj.data));
+				if(obj.data =="done"){
+					///calling cookie creater
+					cookieC(str1);
+					///calling cookie crator ending
+				}else{
+					alert("else" +  this.responseText == '1');
+					document.getElementById("errorMessage").innerHTML = this.responseText;
+				}
+				
+    		}
+  		};
+  		xhttp.open('GET', "http://icd.infinisolutionslk.com/LogIn.php?UserName="+str1+"&Password="+str2, true);
+  		xhttp.send();
+	}else{
+	  	document.getElementById("errorMessage").innerHTML = "Please fill all the fields";
+  	}
+}
+	function cookieC(uName){
+		console.log("uname - "+uName);
+		console.log("calling cookie creator");
+		
+		///find host
+		console.log(window.location.hostname);
+		if(window.location.hostname == "localhost"){
+			console.log("in localhost");
+			////////////////////////////////////////////
+				var xmlhttp = new XMLHttpRequest();
+        		xmlhttp.onreadystatechange = function() {
+        		if (this.readyState === 4 && this.status == 200) {
+        			console.log(this.responseText) ;
+					//alert("loading complete");
+					window.location.href = "index.php";
+           			}
+        		};
+        		xmlhttp.open("GET","cookieCreator.php?uName="+uName, true);//generating  get method link
+        		xmlhttp.send();
+			///////////////////////////////////////////
+		}else{
+			
+			////////////////////////////////////////////
+				var xmlhttp = new XMLHttpRequest();
+        		xmlhttp.onreadystatechange = function() {
+        		if (this.readyState === 4 && this.status == 200) {
+        			console.log(this.responseText) ;
+					//alert("loading complete");
+					window.location.href = "index.php";
+           			}
+        		};
+        		xmlhttp.open("GET","cookieCreator.php?uName="+uName, true);//generating  get method link
+        		xmlhttp.send();
+			///////////////////////////////////////////
+		}
+	}
+</script>
+
+</html>

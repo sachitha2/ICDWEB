@@ -1,0 +1,24 @@
+			<h1>ADD Item</h1>
+				<select id="itemTypesList">
+				
+				</select>
+			
+			
+			<input type="text" id="itemName">
+			<input type="button"  value="Save" id="myBtn" onClick="addItem()">
+			
+		
+	</div>
+
+	//JS going here
+	//----------------------------------------------------------
+		//Enter key press catching startig
+	//----------------------------------------------------------
+	var input = document.getElementById("itemName");
+	input.addEventListener("keyup", function(event) {
+    	event.preventDefault();
+    	if (event.keyCode === 13) {
+        	document.getElementById("myBtn").click();
+    	}
+	});
+

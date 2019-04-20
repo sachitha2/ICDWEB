@@ -1,0 +1,40 @@
+<hr width="100%">
+<img src="back.png" width="90" height="90" onClick="backToCostMenu()" class="floateLeft" style="cursor: pointer">
+<div class="mainHeadDiv">Monthly cost</div>
+<hr width="100%">
+
+<div id="show">
+<div class="row">
+	<div class="col-md-4"></div>
+		<div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
+	  		<div style="opacity: 1.0;">
+
+
+	<h5>Enter Year</h5>
+		<input type="text" class="txtbox" id="Year" name="Year">
+	<h5>Select Month</h5>
+		<select id="Month" style="color: black">
+			<option value="01">January</option>
+			<option value="02">February</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+		<br>
+	<h5 id="errorMessage" style="color: red"></h5><br>
+	<button id="ShowCost" class=" btn-block button button1" type="button" onClick="viewCostMonth()">View Cost</button>
+		
+
+
+			</div>
+		</div>
+	<div class="col-md-4"></div>
+</div>
+</div>

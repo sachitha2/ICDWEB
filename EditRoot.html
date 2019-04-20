@@ -1,0 +1,30 @@
+<hr width="100%">
+<img src="back.png" width="90" height="90" onClick="backToRoutesMenu()" class="floateLeft" style="cursor: pointer">
+<div class="mainHeadDiv">Edit Routes</div>
+<hr width="100%">
+	
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C" >
+	  	<div style="opacity: 1.0;">
+	  
+ 	  	  <div id="show">
+ 	  	  
+  	  	  <h5>Enter the route Id, you want to edit.</h5><br>
+	  	  <h4>Route Name</h4>
+			<input type="text" class="txtbox" name="Root" id="Root" required style="color: black"><br>
+ 	  	  <h4>Change Route Name into</h4>
+			<input type="text" class="txtbox" name="NewRoot" id="NewRoot" onKeyPress="enterEditRoot(event)" required style="color: black"><br>
+  	  	  <h5 id="errorMessage" style="color: red"></h5><br>
+	  	  <button id="EditRoot" class=" btn-block button button1" type="button" onClick="editRoot()">Edit Route</button>
+	  	  
+	  	  </div>
+	  	  
+		</div>
+		</div>
+		<div class="col-md-4">
+			<div align="center" style="vertical-align:middle;">
+				<h5 id="OutRoot" ></h5>
+			</div>
+		</div>
+	</div>

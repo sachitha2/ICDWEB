@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tileButton{
+	opacity: 0.9 !important;
+	background-color: #e7e7e7; color: black; border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+	width: 200px;
+	height: 200px;
+	border-radius: 25px;
+	margin: 5px !important;
+	
+} /* Gray */ 
+.tileButton:hover{
+	cursor: pointer;
+	box-shadow: 5px 5px 4px #000000;
+	
+}
+.mainHeadDiv{
+	width: 100%;height: 90px;
+	background-color: #3C3C3C;color:#FFFFFF;opacity: 1;font-size: 70px;vertical-align: middle;
+}
+.addShopBack {
+	background-image:url( ../addShop.png);
+	background-repeat: no-repeat;
+}
+
+.addShopDelBack{
+	background-image:url( ../dustbin.png);
+	background-repeat: no-repeat;
+}
+
+.addEditShopBack{
+	background-image:url( ../editshopBack.png);
+	background-repeat: no-repeat;
+}
+.viewShopBack{
+	background-image:url(../viewShop.png);
+	background-repeat: no-repeat;
+}
+.usersBack{
+	background-image:url(../user.png);
+	background-repeat: no-repeat;
+}
+.addusersBack{
+	background-image:url(../addUser.png);
+	background-repeat: no-repeat;
+}
+.routeBack{
+	background-image:url(../route.png);
+	background-repeat: no-repeat;
+}
+.vehicleBack{
+	background-image: url(../vehicle.png);
+	background-repeat: no-repeat;
+}
+.itemBack{
+	background-image: url(../item.png);
+	background-repeat: no-repeat;
+}
+.itemTypeBack{
+	background-image: url(../addItem.png);
+	background-repeat: no-repeat;
+}
+.shopBack{
+	background-image: url(../shop.png);
+	background-repeat: no-repeat;
+}
+.addRouteBack{
+	background-image: url(../addRoute.png);
+	background-repeat: no-repeat;
+}
+.addVehicleBack{
+	background-image: url(../addVehicle.png);
+	background-repeat: no-repeat;
+}
+.addItemTypeBack{
+	background-image: url(../addItemType.png);
+	background-repeat: no-repeat;
+}
+.addItemBack{
+	background-image: url(../addItemBack.png);
+	background-repeat: no-repeat;
+}
+.mainStockBack{
+	background-image: url(../mainStock.png);
+	background-repeat: no-repeat;
+}
+.addBillBack{
+	background-image: url(../addBill.png);
+	background-repeat: no-repeat;
+}
+.todayCostBack{
+	background-image: url(../todaycost.png);
+	background-repeat: no-repeat;
+}
+.dateSearchback{
+	background-image: url(../dateSearch.png);
+	background-repeat: no-repeat;
+}
+.monthBack{
+	background-image: url(../month.png);
+	background-repeat: no-repeat;
+}
+.monthSearch{
+	background-image: url(../monthSearch.png);
+	background-repeat: no-repeat;
+}
+.mainStockHistory{
+	background-image: url(../monthSearch.png);
+	background-repeat: no-repeat;
+}
+.viewMainStock{
+	background-image: url(../viewStock.png);
+	background-repeat: no-repeat;
+}
+.updateMainStock{
+	background-image: url(../updateMainStock.png);
+	background-repeat: no-repeat;
+}
+.deleteMainStock{
+	background-image: url(../deleteMainStockItem.png);
+	background-repeat: no-repeat;
+}
+.stockLoading{
+	background-image: url(../stockLoading.png);
+	background-repeat: no-repeat;
+}
+.deleteIcon{
+	background-image: url(../deleteIcon.png);
+	background-repeat: no-repeat;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	min-height: 400px;
+	max-height: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: red;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #5C0001;
+    text-decoration: none;
+    cursor: pointer;
+}
+.addBtnInItems{
+	background-color:red;color:white;margin:10px;padding-top:5px;padding-bottom:5px;padding-left:15px;padding-right:15px;border-radius:30px;cursor:pointer;
+	width: 50px;
+}
+.newItem{
+	
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+.itemNameINVIEW{
+	
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}

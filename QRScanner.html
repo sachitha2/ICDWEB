@@ -1,0 +1,198 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Scanner</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<script type="text/javascript" src="instascan.min.js"></script>
+
+<style>
+	.button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	font-family: 'Merriweather', serif;
+	border-radius: 10px;
+	display: inline-block;
+	transition-duration: 0.4s;
+    cursor: pointer;
+	font-family: 'Merriweather', serif;
+	}
+	.button1 {
+    background-color: #CEF1F5; 
+    color: black; 
+    border: 2px solid #CEF1F5;
+	box-shadow: 0 6px 9px 0 rgba(0,0,0,0.2), 0 4px 18px 0 rgba(0,0,0,0.19);
+	}
+
+	.button1:hover {
+    background-color: #9DE6EF;
+    color: black;
+	border: 2px solid #9DE6EF;
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.19);
+	}	
+	
+	h1{font-family: 'Josefin Sans', sans-serif;}
+	h5{font-family: 'Merriweather', serif;}
+	h4{font-family: 'Merriweather', serif;}
+	h6{font-family: 'Merriweather', serif;}
+	
+	div.transbox {
+  	background-color: #f6f5f5;
+  	opacity: 0.9;
+	padding: 40px;
+	border-radius: 10px;
+	}
+		
+	.txtbox {
+	padding: 5px;
+	width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	font-family: 'Merriweather', serif;
+	margin-top: -4px;
+	margin-bottom: 7px;
+	}
+	
+	textarea{
+	padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	font-family: 'Merriweather', serif;
+	margin-top: -4px;
+	margin-bottom: 7px;
+	}
+	
+	.home:link, .home:active, .home:visited{
+	font-family: 'Merriweather', serif;
+	background-color: #CEF1F5;
+	padding: 10px;
+	text-align: center;
+	color: black;
+	border-radius: 3px;
+	box-shadow: 2px 3px 3px 1px #aaaaaa;
+	text-decoration: none;
+	}
+	
+	.home:hover{
+	font-family: 'Merriweather', serif;
+	background-color: #9DE6EF;
+	padding: 10px;
+	text-align: center;
+	color: black;
+	border-radius: 3px;
+	text-decoration: none;
+	box-shadow: 1.5px 2.5px 2.5px 0.5px #aaaaaa;
+	}
+	
+	.delButton{
+	padding: 5px 10px;
+	border-radius: 4px;
+	}
+	
+	table {
+    border-collapse: collapse;
+    width: 90%;
+	}
+
+	th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+	font-family: 'Merriweather', serif;
+	}
+
+	tr:hover {background-color:#eee;}
+	
+	video {
+	width: 90%  !important;
+	height: auto;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin: 20px 10px 30px 10px;
+	}
+	
+	
+</style>
+
+</head>
+
+<body ><br>
+<div class="container container-fluid">
+
+<div class="jumbotron">
+	<div align="right"><a href="#" target="_blank" class="home">Home</a></div>
+	<h1 align="center">Scan QR Code</h1>
+	<hr width="95%">
+	
+	<div class="row">
+  
+	  <div class="col-md-3" ></div>
+	  
+	  
+	  <div class="col-md-6 transbox" align="center">
+	  	<div style="opacity: 1.0;">
+	  	
+		<video id="preview" class="vid"></video><br>
+
+		<textarea rows="3" cols="24" name="content" id="content"></textarea>
+		
+		</div>
+		</div>
+		
+		<div class="col-md-3"></div>
+	</div>
+</div>
+	
+</div>
+</body>
+
+<script type="text/javascript">
+	
+	  let opts = {
+  	  continuous: true,
+      video: document.getElementById('preview'),
+      mirror: true,
+      captureImage: false,
+      backgroundScan: true,
+      refractoryPeriod: 5000,
+      scanPeriod: 1
+      };
+	
+	  let scanner = new Instascan.Scanner(opts);
+      scanner.addListener('scan', function (content) {
+        //console.log(content);
+		document.getElementById('content').value=content;
+      });
+	
+	  
+	
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+		  
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+	
+</script>
+
+</html>

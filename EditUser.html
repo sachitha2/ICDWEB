@@ -1,0 +1,49 @@
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" id="mainModal" style="background-color: ;">
+  
+  <span class="close" onClick="hideModal()">&times;</span>
+    <div class="" id="modalContent">
+    	<h1>Loading</h1>
+    
+    </div>
+  
+  </div>
+
+</div>
+
+
+<hr width="100%">
+<img src="back.png" width="90" height="90" onClick="backToUsersMenu()" class="floateLeft" style="cursor: pointer">
+<div class="mainHeadDiv">Edit User</div>
+<hr width="100%">
+	
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
+	  	<div style="opacity: 1.0;">
+	  
+ 	  	  <div id="show">
+ 	  	  
+  	  	  <h5>Enter the User name, you want to edit.</h5><br>
+	  	  <h4>User Name</h4>
+			<input type="text" class="txtbox" name="UserName" id="UserName" required style="color: black"><br>
+ 	  	  <h4>Password</h4>
+			<input type="password" class="txtbox" name="Password" id="Password" onKeyPress="enterEditUser(event)"  required style="color: black"><br>
+  	  	  <h5 id="errorMessage" style="color: red"></h5><br>
+	  	  <button id="EditUser" class=" btn-block button button1" type="button" onClick="editUser()" >Edit User</button>
+	  	  
+	  	  </div>
+	  	  
+		</div>
+		</div>
+		<div class="col-md-4">
+			<div align="center" style="vertical-align:middle;">
+				<h5 id="OutName" ></h5>
+				<h5 id="OutNIC" ></h5>
+				<h5 id="OutPhone" ></h5>
+				<h5 id="OutType" ></h5>
+			</div>
+		</div>
+	</div>

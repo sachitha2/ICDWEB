@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+	var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.Ben[2];
+    }
+};
+xmlhttp.open("GET", "json.php", true);
+xmlhttp.send();
+</script>
+<meta charset="utf-8">
+<title>Json object</title>
+</head>
+
+<body>
+<div id="demo"></div>
+</body>
+</html>

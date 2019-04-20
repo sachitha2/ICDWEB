@@ -1,0 +1,59 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" >
+    <span class="close" onClick="hideModal()">&times;</span>
+    <div class="" id="modalContent">
+    
+    
+    </div>
+  </div>
+
+</div>
+
+<!-- modal ending-->
+	<hr width="100%">
+		<img src="back.png" width="90" height="90" onClick="backToUsersMenu()" class="floateLeft" style="cursor: pointer">
+	<div class="mainHeadDiv">Add User</div>
+	<hr width="100%">
+	
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
+	  	<div>
+	  	
+	  	  <h5>User Name</h5>
+			<input type="text" class="txtbox" name="UserName" id="UserName" required style="color: black"><br>
+ 	  	  <h5>NIC Number</h5>
+			<input type="text" class="txtbox" name="NIC_Number" id="NIC_Number" required placeholder=" ex : 987620125" style="color: black"><br>
+ 	  	  <h5>Phone Number</h5>
+			<input type="text" class="txtbox" name="Phone" id="Phone" required placeholder=" ex : 0714453000" style="color:black"><br>
+	  	  <h5>Type</h5>
+ 	  	  <select id="Type" style="color:black;width: 70%">
+  			<option value="1">Employee</option>
+  			<option value="2">Owner</option>
+  			<option value="3">Driver</option>
+		  </select>
+  	  	  <h5>Password</h5>
+			<input type="password" class="txtbox" name="Password" id="Password" required style="color:black"><br>
+		  <h5>Re-enter Password</h5>
+			<input type="password" class="txtbox" name="ReenterPassword" id="ReenterPassword" onKeyPress="enterAddUser(event)" required style="color:black"><br>
+  	  	  <h5 id="errorMessage" style="color: red"></h5><br>
+	  	  <button id="AddUser" class=" btn-block button button1" type="button" onClick="addUser()">Add User</button>
+		
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div align="center" style="vertical-align:middle;">
+				<h5 id="OutName" ></h5>
+				<h5 id="OutNIC" ></h5>
+				<h5 id="OutPhone" ></h5>
+				<h5 id="OutType" ></h5>
+				<div id="DelUser" ></div>
+			</div>
+		</div>
+		
+	</div>
+

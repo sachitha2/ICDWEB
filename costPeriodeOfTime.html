@@ -1,0 +1,27 @@
+<hr width="100%">
+<img src="back.png" width="90" height="90" onClick="backToCostMenu()" class="floateLeft" style="cursor: pointer">
+<div class="mainHeadDiv">Cost</div>
+<hr width="100%">
+
+<div id="show">
+<div class="row">
+	<div class="col-md-4"></div>
+		<div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
+	  		<div style="opacity: 1.0;">
+
+
+	<h5>Select the time periode</h5>
+	<h5>From</h5>
+		<input type="date" class="txtbox" id="From" name="From"><br>
+	<h5>To</h5>
+		<input type="date" class="txtbox" id="To" name="To" onKeyPress="enterCostTimePeriode(event)"><br>
+	<h5 id="errorMessage" style="color: red"></h5><br>
+	<button id="ShowCost" class=" btn-block button button1" type="button" onClick="viewCostTimePeriode()">View Cost</button>
+		
+
+
+			</div>
+		</div>
+	<div class="col-md-4"></div>
+</div>
+</div>

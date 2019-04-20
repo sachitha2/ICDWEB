@@ -1,0 +1,1 @@
+<h1>Add shop page loader</h1>

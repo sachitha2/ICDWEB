@@ -1,0 +1,33 @@
+<body onLoad="showStock()">
+<div class="container container-fluid">
+<div class="jumbotron">
+	<h1 align="center">Stock</h1>
+	<hr width="95%">
+	
+	<div class="row">
+	  <div class="col-md-1"></div>
+	  <div class="col-md-10 transbox" align="center">
+	  	<div style="opacity: 1.0;">
+	  		<div id="show"></div>
+		</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+</div>
+</body>
+
+<script>
+function showStock(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("show").innerHTML=this.responseText;
+			//document.getElementById("show").innerHTML="111";
+		}	
+	};
+	xhttp.open('GET', "ShowStock.php", true);
+  	xhttp.send();
+}
+</script>
