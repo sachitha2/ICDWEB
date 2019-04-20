@@ -14,4 +14,4 @@ $row = mysqli_fetch_assoc($sql);
 <br>
 <br>
 <input type="number" placeholder="Enter amount" id="amount" class="txtbox" >
-<input type="button" value="Save" onClick="pastCreditAdder(<?php echo($id) ?>,amount.value)">
+<input type="button" value="Save" onClick="pastCreditAdder(<?php echo($row['id']) ?>,amount.value)">

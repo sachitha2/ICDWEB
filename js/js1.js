@@ -1977,7 +1977,7 @@ function pastCreditAdder(shopId,amount){
   				hideModal();
            		}
         	};
-        	xmlhttp.open("GET", url+"pastCreditAdder.php?=shopId"+shopId+"&amount="+amount, true);//generating  get method link
+        	xmlhttp.open("GET", url+"pastCreditAdder.php?shopId="+shopId+"&amount="+amount, true);//generating  get method link
         	xmlhttp.send();
  
 	
