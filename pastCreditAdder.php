@@ -7,5 +7,4 @@
 	$id = $_GET['id'];
 	include("db.php");
 	$conn->query("UPDATE shop SET credit = credit + $amount WHERE shop.id = $shopId;");
-	
 ?>

@@ -235,7 +235,7 @@ function shopMenuLoading(){
 
 function pastShopCreditsAddpageLoading(){
 			
-			ajaxCommon("pastShopCreditsSelectShop.php", "mainStage");
+			ajaxCommonGetFromNet("pastShopCreditsSelectShop.php", "mainStage");
 }
 function itemsMenuLoading(){
 			ajaxCommon("itemsMenu.php", "mainStage");
@@ -1935,7 +1935,7 @@ function loadPastShopCreditsToStage(id){
 				//getTmpInvoices(vehicleId);
            		}
         	};
-        	xmlhttp.open("GET", "loadPastShopCreditsToStage.php?id="+id, true);//generating  get method link
+        	xmlhttp.open("GET", url+"loadPastShopCreditsToStage.php?id="+id, true);//generating  get method link
         	xmlhttp.send();
 	
 }
