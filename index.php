@@ -83,7 +83,7 @@ header('Access-Control-Allow-Origin: *');
 			
     		}
 		  };
-		  xmlhttp.open("GET", "https://icd.infinisolutionslk.com/yearDataReport.php", true);
+		  xmlhttp.open("GET", "http://icd.infinisolutionslk.com/yearDataReport.php", true);
 		  xmlhttp.send();
 		 setTimeout(yearBarChart,100000);
 		}
@@ -139,7 +139,7 @@ header('Access-Control-Allow-Origin: *');
 			
     		}
 		  };
-		  xmlhttp.open("GET", "https://icd.infinisolutionslk.com/monthlyDataReport.php", true);
+		  xmlhttp.open("GET", "http://icd.infinisolutionslk.com/monthlyDataReport.php", true);
 		  xmlhttp.send();
 		 setTimeout(yearBarChart,100000);
 		}
