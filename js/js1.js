@@ -1873,8 +1873,19 @@ function conformMainStockByID(id){
         	xmlhttp.send();}
 }
 function deleteMainStockByID(id){
-	alert(id);
-	ajaxCommon('conformMainStockById.php','mainStage');
+			var r = confirm("Are you sure want to Delete");
+			if(r == true){showModal();
+			var xmlhttp = new XMLHttpRequest();
+        	xmlhttp.onreadystatechange = function() {
+        	if (this.readyState === 4 && this.status == 200) {
+				alert(this.responseText);
+  				ajaxCommonGetFromNet(url+'addStock.php', 'mainStage');
+				hideModal();
+				
+           		}
+        	};
+        	xmlhttp.open("GET", url+'deleteMainStockTmpByID.php?id='+id, true);//generating  get method link
+        	xmlhttp.send();}
 	
 }
 function deleteTmpI1B1(tId,vId){

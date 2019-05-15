@@ -88,7 +88,7 @@ $co->dataConn($conn);
 						<td><?php echo($row['date']) ?></td>
 						<td><?php echo($row['exDate']) ?></td>
 						<td><button class="btn btn-primary" onClick="conformMainStockByID(<?php echo($row['id']) ?>)">Conform</button></td>
-						<td><button class="btn btn-danger" onClick="deleteMainStockByID()">Delete</button></td>
+						<td><button class="btn btn-danger" onClick="deleteMainStockByID(<?php echo($row['id']) ?>)">Delete</button></td>
 						
 					</tr>
 					<?php

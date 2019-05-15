@@ -31,7 +31,7 @@
 <file name="addShopPageLoader.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addShopWhite.png" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addShopWhite.psd" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
-<file name="addStock.php" server="infinisolutionslk.com" local="132023728716023525" remote="132023279400000000" Dst="0" />
+<file name="addStock.php" server="infinisolutionslk.com" local="132023743092493106" remote="132023293200000000" Dst="0" />
 <file name="addTransaction.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addTransactionPage.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addTransactionsToShop.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
@@ -277,4 +277,5 @@
 <file name="loadPastShopCreditsToStage.php" server="infinisolutionslk.com" local="132002535450290359" remote="132002085600000000" Dst="0" />
 <file name="pastShopCreditsSelectShop.php" server="infinisolutionslk.com" local="132002149260503774" remote="132001723800000000" Dst="0" />
 <file name="pastCreditAdder.php" server="infinisolutionslk.com" local="132002540731636942" remote="132004324800000000" Dst="0" />
+<file name="deleteMainStockTmpByID.php" server="infinisolutionslk.com" local="132023737614300101" remote="132023289000000000" Dst="0" />
 </dwsync>
