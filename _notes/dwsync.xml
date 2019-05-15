@@ -242,7 +242,7 @@
 <file name="stockLoaderByDateSSide.php" server="infinisolutionslk.com" local="131891700751684234" remote="131891251800000000" Dst="0" />
 <file name="unloadStockSS.php" server="infinisolutionslk.com" local="131889334789810092" remote="131888897400000000" Dst="0" />
 <file name="unloadStockOneByOneSS.php" server="infinisolutionslk.com" local="131889334986265267" remote="131888897400000000" Dst="0" />
-<file name="moveStockToMainWhereHouseOneByOne.php" server="infinisolutionslk.com" local="131889407457538657" remote="131888958000000000" Dst="0" />
+<file name="moveStockToMainWhereHouseOneByOne.php" server="infinisolutionslk.com" local="132024084104395346" remote="132023636400000000" Dst="0" />
 <file name="tmpInvoices.php" server="infinisolutionslk.com" local="131940992778783479" remote="131940543000000000" Dst="0" />
 <file name="viewTmpInvoicesOneByOne.php" server="infinisolutionslk.com" local="131939221873497698" remote="131938772400000000" Dst="0" />
 <file name="selectVehicleForTmpInvoices.php" server="infinisolutionslk.com" local="131897778955525191" remote="131897329200000000" Dst="0" />

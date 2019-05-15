@@ -91,7 +91,7 @@ else{
 			if(($to != 0)){
 				
 				
-				if($soledA  > $ar[$x]){
+				if($to  > $ar[$x]){
 					echo("<br>");
 					echo("skip ".$ar[$x]."<br>");
 					//echo("soled amount".$ar[$x]."<br>");

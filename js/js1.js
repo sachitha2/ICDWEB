@@ -1703,15 +1703,15 @@ function viewVehicleHistoryStock(id){
 }
 function moveStock(vehicleId,rA,aId,id){
 	//moving stock to the main wherehouse
-			showModal();
+//			showModal();
 			document.getElementById("modalContent").innerHTML = "LOADING......";
 			var xmlhttp = new XMLHttpRequest();
         	xmlhttp.onreadystatechange = function() {
         	if (this.readyState === 4 && this.status == 200) {
 				
-				//document.getElementById("mainStage").innerHTML = this.responseText;
-				hideModal();
-				viewVehicleStock(vehicleId);
+				document.getElementById("mainStage").innerHTML = this.responseText;
+//				hideModal();
+//				viewVehicleStock(vehicleId);
   				
 				
            		}
