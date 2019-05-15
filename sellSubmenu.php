@@ -96,26 +96,29 @@ include("url.php");
 	  			<div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C;width: 100%">
 	  			<div style="opacity: 1.0;">
 	  				<h1>+ Transaction</h1>
-	  				<input type="number" placeholder="Enter shop id" id="shopId" style="font-size: 20px;color: black" onKeyPress="eSearchShop(event,shopId.value)"><br><bR>
-					<input type="button" class="button button1" value="Next" onClick="sellPageGet(shopId.value)">
-					
-					
-					<br><br>
-					or
-					<h1>Search Shops</h1>
-					<input id="itemId" list="item" name="item" style="font-size: 20px;color: black;" onKeyPress="enterFindItemNameForVehicleLoading(event,itemId.value,<?php echo($vehicleId) ?>)">
-  					<datalist id="item">
+	  				<input type="text" placeholder="Enter shop id" id="shopId" list="item" style="font-size: 20px;color: black" onKeyPress="eSearchShop(event,shopId.value)"><br><bR>
+	  				<datalist id="item">
    					<?php
 						$sqlItems = "SELECT * FROM shop";
 						$queryItems = $conn->query($sqlItems);
 						while($rowItems = mysqli_fetch_assoc($queryItems)){
 							?>
-							<option  value="<?php echo($rowItems['id']) ?> - <?php echo($rowItems['name']) ?>"></option>
+							<option  value="<?php echo($rowItems['id']) ?>"><?php echo($rowItems['name']) ?></option>
 							<?php
 							}
 					?>
     			
   					</datalist>
+					<input type="button" class="button button1" value="Next" onClick="sellPageGet(shopId.value)">
+					
+					
+<!--
+					<br><br>
+					or
+					<h1>Search Shops</h1>
+					<input id="itemId"  name="item" style="font-size: 20px;color: black;" onKeyPress="enterFindItemNameForVehicleLoading(event,itemId.value,<?php echo($vehicleId) ?>)">
+-->
+  					
 				</div>
 				</div>
 			</div>

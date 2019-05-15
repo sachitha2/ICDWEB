@@ -50,7 +50,7 @@ $vehicleId = $_GET['vehicleId'];
 				$queryItems = $conn->query($sqlItems);
 				while($rowItems = mysqli_fetch_assoc($queryItems)){
 					?>
-					<option  value="<?php echo($rowItems['id']) ?> - <?php $co->getItemNameByStockId($rowItems['id']) ?>"></option>
+					<option  value="<?php echo($rowItems['id']) ?>"><?php $co->getItemNameByStockId($rowItems['id']) ?></option>
 					<?php
 				}
 			?>

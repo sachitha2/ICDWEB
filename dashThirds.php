@@ -73,7 +73,7 @@ $buttons = array(
 	['view' =>'alert(25)','add'=>'','edit'=>''],
 	['view' =>'alert(25)','add'=>'','edit'=>''],
 	['view' =>'alert(25)','add'=>'','edit'=>''],
-	['view' =>"ajaxCommonGetFromNet('https://icd.infinisolutionslk.com/rootsAndShops.php','mainStage')",'add'=>'addShopPageLoader()','edit'=>"ajaxCommon('editShopInterface.php','mainStage')"],
+	['view' =>"ajaxCommonGetFromNet('http://icd.infinisolutionslk.com/rootsAndShops.php','mainStage')",'add'=>'addShopPageLoader()','edit'=>"ajaxCommon('editShopInterface.php','mainStage')"],
 
 
 );

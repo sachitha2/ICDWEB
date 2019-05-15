@@ -37,8 +37,23 @@ $co->dataConn($conn);
 	  <div class="col-md-4 transbox" align="center" style="color:beige;background-color: #3C3C3C">
 	  	<div style="opacity: 1.0;">
 	  			
-				<input type="number" id="itemId"  style="font-size: 20px;color: black;" onKeyPress="enterUpdateMainStockItemFinder(event,this.value)" placeholder="Enter Item Id">
+				<input type="text" id="itemId"  style="font-size: 20px;color: black;" list="item" onKeyPress="enterUpdateMainStockItemFinder(event,this.value)" placeholder="Enter Item Id">
+				
+				<datalist id="item">
+   				<?php
+				$sqlItems = "SELECT * FROM item";
+				$queryItems = $conn->query($sqlItems);
+				while($rowItems = mysqli_fetch_assoc($queryItems)){
+					?>
+					<option  value="<?php echo($rowItems['id']) ?>"><?php $co->getItemNameByStockId($rowItems['id']) ?></option>
+					<?php
+				}
+			?>
+    			
+  			</datalist>
+				
 				<input type="button"  onClick="getItemNameAndAvailability(itemId.value)" class="btn btn-primary" value="NEXT">
+				
 				<br>
 				<!--
 				<input type="button" value="next" onClick="getItemNameAndAvailability(itemId.value)"  style="font-size: 20px;color: black;" >
