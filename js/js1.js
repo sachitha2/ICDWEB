@@ -1223,9 +1223,12 @@ function getItemNameAndAvailability(itemId){
 				if(itemId == ''){
 					alert("enter  a item id");
 			}
-			else{var xmlhttp = new XMLHttpRequest();
+			else{
+				showModal();
+				var xmlhttp = new XMLHttpRequest();
         	xmlhttp.onreadystatechange = function() {
         	if (this.readyState === 4 && this.status == 200) {
+					hideModal();
 					document.getElementById("formStage").innerHTML   =   this.responseText;
            		}
         	};
@@ -1869,7 +1872,7 @@ function conformMainStockByID(id){
         	xmlhttp.open("GET", url+'conformMainStockById.php?id='+id, true);//generating  get method link
         	xmlhttp.send();}
 }
-function deleteMainStockByID(){
+function deleteMainStockByID(id){
 	alert(id);
 	ajaxCommon('conformMainStockById.php','mainStage');
 	

@@ -40,6 +40,13 @@ class DB{
 		$numRow = mysqli_num_rows($rusrlt);
 		return($numRow);
 	}
+	
+	function nRow($table,$logic,$col = "*"){
+		$sql = "SELECT $col FROM {$table} {$logic}"; 
+		$result = $this->conn->query($sql);
+		return(mysqli_num_rows($result));
+	}
+	
 	function getShopNameById($id){
 		$sql = "SELECT * FROM shop WHERE id = $id";
 	  	$result = $this->conn->query($sql);

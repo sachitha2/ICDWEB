@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name=".ftpquota" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
+<file name=".ftpquota" server="infinisolutionslk.com" local="132019428600000000" remote="132019428600000000" Dst="0" />
 <file name=".htaccess" server="infinisolutionslk.com" local="131891925600000000" remote="131891925600000000" Dst="0" />
 <file name="1.jpg" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="12.html" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
@@ -31,7 +31,7 @@
 <file name="addShopPageLoader.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addShopWhite.png" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addShopWhite.psd" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
-<file name="addStock.php" server="infinisolutionslk.com" local="131912174361747392" remote="131911724400000000" Dst="0" />
+<file name="addStock.php" server="infinisolutionslk.com" local="132023728716023525" remote="132023279400000000" Dst="0" />
 <file name="addTransaction.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addTransactionPage.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="addTransactionsToShop.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
@@ -63,7 +63,7 @@
 <file name="dash.php" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="dash.png" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="dateSearch.png" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
-<file name="db.php" server="infinisolutionslk.com" local="131859037526206120" remote="131858590200000000" Dst="0" />
+<file name="db.php" server="infinisolutionslk.com" local="131858298000000000" remote="131858298000000000" Dst="0" />
 <file name="del.php" server="infinisolutionslk.com" local="131889338734726331" remote="131888896800000000" Dst="0" />
 <file name="deleteIcon.png" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
 <file name="deleteItem.html" server="infinisolutionslk.com" local="131759802000000000" remote="131759802000000000" Dst="0" />
@@ -251,7 +251,7 @@
 <file name="finishInvoicePage.php" server="infinisolutionslk.com" local="131889331633111901" remote="131888896800000000" Dst="0" />
 <file name="conformTmpInvoices.php" server="infinisolutionslk.com" local="131895103210000000" remote="131894653800000000" Dst="0" />
 <file name="viewStockItemVise.php" server="infinisolutionslk.com" local="131889331479984845" remote="131888897400000000" Dst="0" />
-<file name="JSONData.php" server="infinisolutionslk.com" local="131856251833080791" remote="131855803200000000" Dst="0" />
+<file name="JSONData.php" server="infinisolutionslk.com" local="131855706000000000" remote="131855706000000000" Dst="0" />
 <file name="conformMainStockById.php" server="infinisolutionslk.com" local="131910724116151866" remote="131910276000000000" Dst="0" />
 <file name="tmpStockOfAVehicle.php" server="infinisolutionslk.com" local="131889331075827157" remote="131888897400000000" Dst="0" />
 <file name="conformVehicleStock.php" server="infinisolutionslk.com" local="131889330980966127" remote="131888896800000000" Dst="0" />

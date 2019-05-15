@@ -52,6 +52,10 @@ $co->dataConn($conn);
 	</div>
 
 <div id="unConformedStock">
+
+<?php if($co->nRow("item_amount"," WHERE s = 0 ") != 0){ ?>
+	
+
 	UNCONFORMED STOCK
 	<button onClick="" class="btn btn-danger btn-lg">Delete all</button>
 	<button onClick="" class="btn btn-primary btn-lg">Conform All</button>
@@ -94,6 +98,11 @@ $co->dataConn($conn);
 			
 			?>
 		</table>
+		<?php }
+	else{
+		echo("No Tmp Stock Found");
+	}
+	?>
 </div>
 
 <?php $conn->close(); ?>
