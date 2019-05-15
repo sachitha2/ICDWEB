@@ -78,7 +78,7 @@ $resultGetItemId = $conn->query($sqlGetItemId);
 				<td><?php echo($rowItem['id']); ?></td>
 				<td><?php $co->getItemNameByStockId($rowItem['id']) ?></td>
 				<?php
-					$sqlL = "WHERE item_id = ".$rowItem['id']."";
+					$sqlL = "WHERE item_id = ".$rowItem['id']."  AND s = 1 ";
 				?>
 				<td><?php echo($co->getSumOfATable("item_amount","loadedAmount",$sqlL)) ?></td>
 				<td><?php echo($co->getSumOfATable("item_amount","amount",$sqlL)) ?></td>
@@ -119,7 +119,7 @@ $resultGetItemId = $conn->query($sqlGetItemId);
 				
 			</tr>
 			<?php
-				$sqlItemA = "SELECT * FROM item_amount WHERE item_id = ".$rowItem['id']." ORDER BY item_amount.date ASC";
+				$sqlItemA = "SELECT * FROM item_amount WHERE item_id = ".$rowItem['id']." AND s = 1 ORDER BY item_amount.date ASC";
 				$resultA = $conn->query($sqlItemA);
 				while($rowItamA = mysqli_fetch_assoc($resultA)){?>
 					<tr>
@@ -151,7 +151,7 @@ $resultGetItemId = $conn->query($sqlGetItemId);
 				<td></td>
 				<td></td>
 				<?php
-					$sqlL = "WHERE item_id = ".$rowItem['id']."";
+					$sqlL = "WHERE item_id = ".$rowItem['id']."  AND s = 1 ";
 				?>
 				<td><?php echo($co->getSumOfATable("item_amount","loadedAmount",$sqlL)) ?></td>
 				<td><?php echo($co->getSumOfATable("item_amount","amount",$sqlL)) ?></td>
