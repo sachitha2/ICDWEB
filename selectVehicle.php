@@ -57,7 +57,7 @@ while($row = mysqli_fetch_assoc($result)){
               <li></li>
             </ul>
             
-			<button class="btn btn-primary btn-lg" onclick="viewVehicleStock(1)">View</button>
+			<button class="btn btn-primary btn-lg" onclick="viewVehicleStock(<?php echo($row['id']); ?>)">View</button>
 		  <button class="btn btn-danger btn-lg" onClick="addStockToVehiclePage(<?php echo($row['id']); ?>)">Add</button>
 			  <div>user id <?php echo($row['id']); ?></div>
           </div>
