@@ -1,5 +1,5 @@
 <?php
-	include("URD.php");
+//	include("URD.php");
 	include("db.php");
 	include("func/DB.class.php");
 	
@@ -58,6 +58,10 @@
 			///2018/11/26
 			////finding duplicates
 			$duSql = "SELECT * FROM tmpStock WHERE invoiceN = '$invoiceN' AND  stockId = $stockId AND selectedPrice = '$selectedPrice' AND qty = $qty";
+			
+//			echo($co->getNumRow($duSql));
+			
+			
 			if($co->getNumRow($duSql) == 0){
 				///adding data to the tmp stock table
 				$sql = "INSERT INTO tmpStock (id, invoiceN, s, loadedStock, selectedPrice, stockId, qty) VALUES (NULL, '$invoiceN', '$s', '$loadedStock', '$selectedPrice', '$stockId', '$qty');";

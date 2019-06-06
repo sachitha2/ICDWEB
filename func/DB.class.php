@@ -100,17 +100,17 @@ class DB{
 		$result = $this->conn->query($sql);
 		return($result);
 	}
-	function select($table,$logic){
-		 $sql = "SELECT * FROM {$table} {$logic}"; 
-		 $result = $this->conn->query($sql);
-		 
-		 $ar = array();
-		 $x = 0;
-	  	 while($row = mysqli_fetch_assoc($result)){
-		  	 $ar[$x] = $row;
-			 $x++;
-	  	 }
-		return($ar);
-	}
+//	function select($table,$logic){
+//		 $sql = "SELECT * FROM {$table} {$logic}"; 
+//		 $result = $this->conn->query($sql);
+//		 
+//		 $ar = array();
+//		 $x = 0;
+//	  	 while($row = mysqli_fetch_assoc($result)){
+//		  	 $ar[$x] = $row;
+//			 $x++;
+//	  	 }
+//		return($ar);
+//	}
 }
 
